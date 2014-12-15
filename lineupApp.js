@@ -13,6 +13,13 @@ angular.module('lineupApp', ['ng-sortable'])
             { name: 'J', number: '24' },
             { name: 'K', number: '28' }
         ];
+        // $http.get('data/players.json').
+        // success(function(data, status, headers, config) {
+        //   $scope.player = data;
+        // }).
+        // error(function(data, status, headers, config) {
+        //   // log error
+        // });
         $scope.playerConfig = { animation: 150 };
         
         $scope.spots = 10;
