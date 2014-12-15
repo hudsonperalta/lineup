@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<title>Line-Up</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=0.5"/>
+
+	<link href="app.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div id="lineup" ng-app="lineupApp" ng-controller="demo">
+
+    <!-- <ul id="order" ng-sortable="orderConfig">
+        <li ng-repeat="item in order">{{item}}</li>
+    </ul> -->
+
+    <ul id="players" ng-sortable="playerConfig">
+        <li ng-repeat="item in player" data-number="{{item.number}}">
+        	<div>{{item.number}}</div>
+        	{{item.name}}
+        </li>
+    </ul>
+
+    <ul id="pos" ng-sortable="posConfig">
+        <li ng-repeat="item in pos">{{item}}</li>
+    </ul>
+
+</div>
+
+<script src="Sortable.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="ng-sortable.js"></script>
+
+<script>
+	(function (){
+
+		angular.module('lineupApp', ['ng-sortable'])
+		    .controller('demo', ['$scope', function ($scope) {
+		        //$scope.order = ['1','2','3','4','5','6','7','8','9','10','BE'];
+		        //$scope.orderConfig = { disabled: true, animation: 150 };
+		        $scope.player = [
+					{ name: 'A', number: '8' },
+					{ name: 'B', number: '10' },
+					{ name: 'C', number: '18' },
+					{ name: 'D', number: '2' },
+					{ name: 'E', number: '3' },
+					{ name: 'F', number: '7' },
+					{ name: 'G', number: '9' },
+					{ name: 'H', number: '4' },
+					{ name: 'I', number: '44' },
+					{ name: 'J', number: '24' },
+					{ name: 'K', number: '28' }
+				];
+		        $scope.playerConfig = { group: 'playerpos', animation: 150 };
+		        $scope.pos = ['P','C','1B','2B','3B','SS','LF','RF','CF','EH'];
+		        $scope.posConfig = { animation: 150 };
+	    }]);
+	})();
+</script>
+
+</body>
+</html>
