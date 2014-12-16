@@ -1,26 +1,10 @@
 var theApp = angular.module('lineupApp', ['ng-sortable']);
     
-    theApp.controller('lineup', ['$scope', function ($scope) {
-        $scope.player = [
-            { name: 'A', number: '8' },
-            { name: 'B', number: '10' },
-            { name: 'C', number: '18' },
-            { name: 'D', number: '2' },
-            { name: 'E', number: '3' },
-            { name: 'F', number: '7' },
-            { name: 'G', number: '9' },
-            { name: 'H', number: '4' },
-            { name: 'I', number: '44' },
-            { name: 'J', number: '24' },
-            { name: 'K', number: '28' }
-        ];
-        // $http.get('data/players.json').
-        // success(function(data, status, headers, config) {
-        //   $scope.player = data;
-        // }).
-        // error(function(data, status, headers, config) {
-        //   // log error
-        // });
+    theApp.controller('lineup', ['$scope', '$http', function($scope,$http) {
+        $http.get('data/players.json')
+            .then(function(res){
+                $scope.player = res.data;                
+            });
         $scope.playerConfig = { animation: 150 };
         
         $scope.spots = 10;
@@ -40,7 +24,7 @@ var theApp = angular.module('lineupApp', ['ng-sortable']);
             { pos: 'RF', posNum: '9' },
             { pos: 'EH', posNum: '10' }
         ];
-        
+
     }])
 
 // jQuery
