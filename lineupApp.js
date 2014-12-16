@@ -1,5 +1,6 @@
-angular.module('lineupApp', ['ng-sortable'])
-    .controller('lineup', ['$scope', function ($scope) {
+var theApp = angular.module('lineupApp', ['ng-sortable']);
+    
+    theApp.controller('lineup', ['$scope', function ($scope) {
         $scope.player = [
             { name: 'A', number: '8' },
             { name: 'B', number: '10' },
