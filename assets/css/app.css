@@ -1,0 +1,93 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700,900);
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body { 
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+  background: #f4f4f4;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+#debug { position: fixed; top: 0 }
+
+ul { list-style: none; padding: 0; }
+ul li,
+ul li span,
+ul li div { 
+  background: rgba(255,255,255,1);
+  margin-bottom: 5px; 
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  position: relative;
+  height: 53px;
+  text-align: center
+}
+
+ul li span,
+ul li div { 
+  position: absolute;
+  top: 0;
+  width: 50px;
+  text-align: center
+}
+
+/*  NUMBER  */
+ul li span { 
+  border-radius: 4px 0 0 4px;
+  left: -55px;
+  color: #999;
+}
+
+/*  POSITION  */
+ul li div { 
+  border-radius: 0 4px 4px 0;
+  right: -55px;
+  top: 0;
+}
+
+[draggable="true"] { 
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+}
+
+ul#order,
+ul#players,
+ul#pos,
+ul#posOptions { position: absolute; }
+
+ul li:nth-child(n+11),
+ul li:nth-child(n+11) span {
+	background: rgba(255,255,255,0.3);
+	color: #BBB;
+	text-shadow: 1px 1px 0 rgba(255,255,255,1);
+}
+
+ul li:nth-child(n+11) div {
+	display: none;
+}
+
+ul#players { left: 70px; right: 70px; }
+ul#players li { text-align: left; }
+
+.playerPos { border-radius: 0 4px 4px 0; border: 3px solid transparent; padding: 13px; }
+.playerPos[data-selection="focus"] { border-color: rgba(156, 193, 228, 0.5) }
+
+ul#posOptions { width: 50px; right: -40px; display: none }
+ul#posOptions.open { display: block }
+
+[data-selected="selected"] { color: rgba(0, 0, 0, 0.25) }
+
+
+
+
+
+
+
+
+
