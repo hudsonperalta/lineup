@@ -1,3 +1,5 @@
+//-- Angular --
+//Setup Player list
 var theApp = angular.module('lineupApp', ['ng-sortable']);
     
     theApp.controller('lineup', ['$scope', '$http', function($scope,$http) {
@@ -27,74 +29,100 @@ var theApp = angular.module('lineupApp', ['ng-sortable']);
 
     }])
 
-// jQuery
-posOpen = 0;
-var posSelected = [];
-var allPositions = [1,2,3,4,5,6,7,8,9,10];
-var removeItem = 0;
+//-- jQuery --
+//Variables
+var posOpen = 0;
+var posList = new Array(10); //indexed 0-9
 
+var $setPos; 
+var setPosNum;
+var $pos;
+var thisPos;
+var thisPosNum;
+
+
+//Add position into the box
 function drawPos(){
-    //var posSelected = '';
-    $('.playerPos:not([data-set-pos=""])').each(function() { 
-        posSelected.push($(this).attr('data-set-pos')) 
-    });
-    
     $('#sel').text(posSelected)
 }
 
+//Open Position List
 function openPos() {
     if(posOpen == 0) {
         posOpen = 1;
         $('#posOptions').addClass('open');
     }
-    //else closePos();
 }
 
+//Close position list
 function closePos() {
-    posOpen = 1;
+    posOpen = 0; //Changed from 1 to 0
     $('#posOptions').removeClass('open');
 }
 
+//Set focus only to user selected position box
 function remFocus() {
     $('.playerPos[data-selection]').attr('data-selection','');
 }
 
+//Reset box data
+function resetPos($resPos){
+    $resPos.text('').attr('data-set-pos','');
+    $('[data-pos-number='+setPosNum+']').attr('data-selected','');
+}
+
+//Set Postion in box
+function setPos(){
+    $('[data-set-pos='+thisPosNum+']').text('').attr('data-set-pos','');
+    $pos.attr('data-selected','selected');
+    $setPos.text(thisPos).attr('data-set-pos',thisPosNum);  
+    setPosNum = $setPos.attr('data-set-pos');
+    
+    posList[thisPosNum-1]=$setPos;
+}
+
+//Position box clicked
 $(document).on('click', '.playerPos', function() {
-    remFocus();
-    openPos();
+    //Set Focus to position box
+    remFocus(); 
     $(this).attr('data-selection','focus');
+    
+    //set selection data
+    $setPos = $('.playerPos[data-selection="focus"]');
+    setPosNum = $setPos.attr('data-set-pos');
+    
+    //Open position list
+    if(posOpen != 1)
+        openPos();
+        
+    //Clear any existing value
+     if(setPosNum>0){
+        resetPos($setPos);
+        setPosNum='';
+    }
 });
 
+//Position Selected
 $(document).on('click', '#posOptions li', function() {
-    var $pos = $(this);
-    var thisPos = $pos.attr('data-pos');
-    var thisPosNum = $pos.attr('data-pos-number');
-    
-    var $setPos = $('.playerPos[data-selection="focus"]');
-    var setPosNum = $setPos.attr('data-set-pos');
-    
-    var removeItem = setPosNum;
+    //Set Position Selection
+    $pos = $(this);
+    thisPos = $pos.attr('data-pos');
+    thisPosNum = $pos.attr('data-pos-number');
 
-    if(setPosNum != '') {
-        $('[data-pos-number='+setPosNum+']').attr('data-selected','');
-        $setPos.text(thisPos).attr('data-set-pos',thisPosNum);
-        $pos.attr('data-selected','selected');
-        
-        posSelected = jQuery.grep(posSelected, function(value) {
-            return value != removeItem;
-        });
-    }
-    else {
-        if ($.inArray(thisPosNum, posSelected) !== -1){
-            $('[data-set-pos='+thisPosNum+']').text('').attr('data-set-pos','');
-            $setPos.text(thisPos).attr('data-set-pos',thisPosNum);
+    //Check if position is already in use
+    if($pos.attr('data-selected') != 'selected'){
+        //Not used, check if selection already has postion
+        if(setPosNum == '') {
+            //No postion, fill
+            setPos();
+        }else{
+            //Has postion, clear then fill
+            resetPos($pos);
+            setPos();
         }
-        else {
-            $pos.attr('data-selected','selected');
-            $setPos.text(thisPos).attr('data-set-pos',thisPosNum);
-        }
+    }else{
+        //In use, switch.
+        resetPos(posList[thisPosNum-1]);
+        setPos();   
     }
-
-    drawPos();
-
 });
