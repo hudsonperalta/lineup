@@ -1,46 +1,46 @@
 [
   { 
-    "name": "A",
-    "number": "8"
+    "name": "Symington, Jack",
+    "number": "7"
   },
   { 
-    "name": "B",
-    "number": "10"
+    "name": "Hudson-Peralta, Noah",
+    "number": "6"
   },
   { 
-  	"name": "C", 
-  	"number": "18" 
+  	"name": "Butler, Blake", 
+  	"number": "17" 
   },
   { 
-  	"name": "D", 
-  	"number": "2" 
-  },
-  { 
-  	"name": "E", 
-  	"number": "3" 
-  },
-  { 
-  	"name": "F", 
-  	"number": "7" 
-  },
-  { 
-    "name": "G", 
-    "number": "9" 
-  },
-  { 
-  	"name": "H", 
-  	"number": "4" 
-  },
-  { 
-  	"name": "I", 
-  	"number": "44" 
-  },
-  { 
-  	"name": "J", 
+  	"name": "Phillips, Quartaze", 
   	"number": "24" 
   },
   { 
-  	"name": "K", 
-  	"number": "28" 
+  	"name": "Randall, Robbie", 
+  	"number": "19" 
+  },
+  { 
+  	"name": "Bates, Donovan", 
+  	"number": "3" 
+  },
+  { 
+    "name": "Teschendorf, Bryce", 
+    "number": "9" 
+  },
+  { 
+  	"name": "George, Nik", 
+  	"number": "2" 
+  },
+  { 
+  	"name": "Flaherty, Evan", 
+  	"number": "41" 
+  },
+  { 
+  	"name": "Szep, Wil",
+    "number": "18"
+  },
+  { 
+  	"name": "Addleman, Jordan",
+    "number": "28" 
   }
 ]
