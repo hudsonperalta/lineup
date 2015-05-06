@@ -8,7 +8,7 @@ var theApp = angular.module('lineupApp', ['ng-sortable']);
                 $scope.player = res.data;
             });
         $scope.playerConfig = {
-            group: "localStorage-example",
+            group: "thisLineup",
             animation: 150,
             store: {
                 /**
