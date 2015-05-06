@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body { 
+body {
   width: 100%;
   max-width: 640px;
   margin: 0 auto;
@@ -19,39 +19,42 @@ body {
 ul { list-style: none; padding: 0; }
 ul li,
 ul li span,
-ul li div { 
+ul li div {
   background: rgba(255,255,255,1);
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
   padding: 16px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   position: relative;
   height: 53px;
-  text-align: center
+  text-align: center;
 }
 
 ul li span,
-ul li div { 
+ul li div {
   position: absolute;
   top: 0;
   width: 50px;
-  text-align: center
+  text-align: center;
 }
 
 /*  NUMBER  */
-ul li span { 
+ul li span {
   border-radius: 4px 0 0 4px;
   left: -55px;
   color: #999;
+  position: relative;
+  position: absolute;
+  text-shadow: 1px 1px 0 rgba(255,255,255,1);
 }
 
 /*  POSITION  */
-ul li div { 
+ul li div {
   border-radius: 0 4px 4px 0;
   right: -55px;
   top: 0;
 }
 
-[draggable="true"] { 
+[draggable="true"] {
   background: rgba(255,255,255,0.8);
   box-shadow: 0 1px 8px rgba(0,0,0,0.2);
 }
@@ -85,9 +88,63 @@ ul#posOptions.open { display: block }
 
 
 
+/*  ORDER NUMBERS  */
+ul li span:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 4px;
+  top: 0;
+  width: 90%;
+  height: 100%;
+  z-index: 1;
+  opacity: 1;
+  background-image: url('../img/numbers/1.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
 
+ul li:nth-child(2) span:before {
+  background-image: url('../img/numbers/2.svg');
+}
 
+ul li:nth-child(3) span:before {
+  background-image: url('../img/numbers/3.svg');
+}
 
+ul li:nth-child(4) span:before {
+  background-image: url('../img/numbers/4.svg');
+}
 
+ul li:nth-child(5) span:before {
+  background-image: url('../img/numbers/5.svg');
+}
 
+ul li:nth-child(6) span:before {
+  background-image: url('../img/numbers/6.svg');
+}
 
+ul li:nth-child(7) span:before {
+  background-image: url('../img/numbers/7.svg');
+}
+
+ul li:nth-child(8) span:before {
+  background-image: url('../img/numbers/8.svg');
+}
+
+ul li:nth-child(9) span:before {
+  background-image: url('../img/numbers/9.svg');
+}
+
+ul li:nth-child(10) span:before {
+  background-image: url('../img/numbers/10.svg');
+}
+
+ul li:nth-child(11) span:before {
+  background-image: none;
+}
