@@ -75,6 +75,7 @@ function openPos() {
     if(posOpen == 0) {
         posOpen = 1;
         $('#posOptions').addClass('open');
+        $('body').addClass('choosePos');
     }
 }
 
