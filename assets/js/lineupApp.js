@@ -1,19 +1,42 @@
 //-- Angular --
 //Setup Player list
 var theApp = angular.module('lineupApp', ['ng-sortable']);
-    
+
     theApp.controller('lineup', ['$scope', '$http', function($scope,$http) {
         $http.get('data/players.json')
             .then(function(res){
-                $scope.player = res.data;                
+                $scope.player = res.data;
             });
-        $scope.playerConfig = { animation: 150 };
-        
+        $scope.playerConfig = {
+            group: "localStorage-example",
+            animation: 150,
+            store: {
+                /**
+                 * Get the order of elements. Called once during initialization.
+                 * @param   {Sortable}  sortable
+                 * @returns {Array}
+                 */
+                get: function (sortable) {
+                    var order = localStorage.getItem(sortable.options.group);
+                    return order ? order.split('|') : [];
+                },
+
+                /**
+                 * Save the order of elements. Called onEnd (when the item is dropped).
+                 * @param {Sortable}  sortable
+                 */
+                set: function (sortable) {
+                    var order = sortable.toArray();
+                    localStorage.setItem(sortable.options.group, order.join('|'));
+                }
+            }
+        };
+
         $scope.spots = 10;
         $scope.getSpots = function (num) {
-            return new Array(num);   
+            return new Array(num);
         }
-        
+
         $scope.positions = [
             { pos: 'P', posNum: '1' },
             { pos: 'C', posNum: '2' },
@@ -29,12 +52,13 @@ var theApp = angular.module('lineupApp', ['ng-sortable']);
 
     }])
 
+
 //-- jQuery --
 //Variables
 var posOpen = 0;
 var posList = new Array(10); //indexed 0-9
 
-var $setPos; 
+var $setPos;
 var setPosNum;
 var $pos;
 var thisPos;
@@ -75,26 +99,26 @@ function resetPos($resPos){
 function setPos(){
     $('[data-set-pos='+thisPosNum+']').text('').attr('data-set-pos','');
     $pos.attr('data-selected','selected');
-    $setPos.text(thisPos).attr('data-set-pos',thisPosNum);  
+    $setPos.text(thisPos).attr('data-set-pos',thisPosNum);
     setPosNum = $setPos.attr('data-set-pos');
-    
+
     posList[thisPosNum-1]=$setPos;
 }
 
 //Position box clicked
 $(document).on('click', '.playerPos', function() {
     //Set Focus to position box
-    remFocus(); 
+    remFocus();
     $(this).attr('data-selection','focus');
-    
+
     //set selection data
     $setPos = $('.playerPos[data-selection="focus"]');
     setPosNum = $setPos.attr('data-set-pos');
-    
+
     //Open position list
     if(posOpen != 1)
         openPos();
-        
+
     //Clear any existing value
      if(setPosNum>0){
         resetPos($setPos);
@@ -123,6 +147,6 @@ $(document).on('click', '#posOptions li', function() {
     }else{
         //In use, switch.
         resetPos(posList[thisPosNum-1]);
-        setPos();   
+        setPos();
     }
 });

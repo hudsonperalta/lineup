@@ -13,21 +13,21 @@
 <body>
 
 <div id="debug">
-    Selected: <span id="sel"></span> 
+    Selected: <span id="sel"></span>
 </div>
-    
+
 <div id="lineup" ng-app="lineupApp" ng-controller="lineup">
 
     <ul id="players" ng-sortable="playerConfig">
-        <li ng-repeat="item in player" data-number="{{item.number}}">
+        <li ng-repeat="item in player" data-number="{{item.number}}" data-id="{{item.number}} - {{item.name}} - {{item.pos}}">
         	<span>{{item.number}}</span>
         	{{item.name}}
-            <div class="playerPos" data-set-pos="" data-selection=""></div> 
+            <div class="playerPos" data-set-pos="" data-selection=""></div>
         </li>
     </ul>
 
     <ul id="posOptions">
-        <li ng-repeat="item in positions" 
+        <li ng-repeat="item in positions"
             data-pos="{{item.pos}}" data-pos-number="{{item.posNum}}"
             data-selected="">
         	{{item.pos}}
@@ -39,9 +39,9 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="assets/js/Sortable.js"></script>
-<script src="assets/js/ng-sortable.js"></script>
-<script src="assets/js/lineupApp.js"></script>
+<script src="assets/js/min/Sortable-min.js"></script>
+<script src="assets/js/min/ng-sortable-min.js"></script>
+<script src="assets/js/min/lineupApp-min.js"></script>
 
 </body>
 </html>
