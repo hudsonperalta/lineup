@@ -1,7 +1,7 @@
 [
   { 
     "name": "Symington, Jack",
-    "number": "7"
+    "number": "17"
   },
   { 
     "name": "Hudson-Peralta, Noah",
@@ -9,7 +9,7 @@
   },
   { 
   	"name": "Butler, Blake", 
-  	"number": "17" 
+  	"number": "7" 
   },
   { 
   	"name": "Phillips, Quartaze", 
@@ -20,6 +20,14 @@
   	"number": "19" 
   },
   { 
+    "name": "George, Nik", 
+    "number": "2" 
+  },
+  { 
+    "name": "Flaherty, Evan", 
+    "number": "41" 
+  },
+  { 
   	"name": "Bates, Donovan", 
   	"number": "3" 
   },
@@ -28,19 +36,11 @@
     "number": "9" 
   },
   { 
-  	"name": "George, Nik", 
-  	"number": "2" 
-  },
-  { 
-  	"name": "Flaherty, Evan", 
-  	"number": "41" 
+    "name": "Addleman, Jordan",
+    "number": "28" 
   },
   { 
   	"name": "Szep, Wil",
     "number": "18"
-  },
-  { 
-  	"name": "Addleman, Jordan",
-    "number": "28" 
   }
 ]
