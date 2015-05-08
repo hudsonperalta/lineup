@@ -3,10 +3,23 @@
 var theApp = angular.module('lineupApp', ['ng-sortable']);
 
     theApp.controller('lineup', ['$scope', '$http', function($scope,$http) {
-        $http.get('data/players.json')
-            .then(function(res){
-                $scope.player = res.data;
-            });
+        // $http.get('data/players.json')
+        //     .then(function(res){
+        //         $scope.player = res.data;
+        //     });
+        $scope.player = [
+            { "name": "Symington, Jack", "number": "17", "defSpot": "1" },
+            { "name": "Hudson-Peralta, Noah", "number": "6", "defSpot": "2" },
+            { "name": "Butler, Blake", "number": "7", "defSpot": "3" },
+            { "name": "Phillips, Quartaze", "number": "24", "defSpot": "4" },
+            { "name": "Randall, Robbie", "number": "19", "defSpot": "5" },
+            { "name": "George, Nik", "number": "2", "defSpot": "6" },
+            { "name": "Flaherty, Evan", "number": "41", "defSpot": "7" },
+            { "name": "Bates, Donovan", "number": "3", "defSpot": "8" },
+            { "name": "Teschendorf, Bryce", "number": "9", "defSpot": "9" },
+            { "name": "Addleman, Jordan", "number": "28", "defSpot": "10" },
+            { "name": "Szep, Wil", "number": "18", "defSpot": "11" }
+        ];
         $scope.playerConfig = {
             group: "thisLineup",
             animation: 150,
