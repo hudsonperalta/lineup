@@ -18,11 +18,14 @@
 
 <div id="lineup" ng-app="lineupApp" ng-controller="lineup">
 
-    <ul id="players" ng-sortable="playerConfig">
-        <li ng-repeat="item in player" data-number="{{item.number}}" data-id="{{item.defSpot}}">
+    <ul id="players" ng-sortable="sortableOptions">
+        <!-- <li ng-repeat="item in player" data-number="{{item.number}}" data-id="{{item.defSpot}}">
         	<span>{{item.number}}</span>
         	{{item.name}}
             <div class="playerPos" data-set-pos="" data-selection=""></div>
+        </li> -->
+        <li ng-repeat="model in models">
+            {{model.name}}
         </li>
     </ul>
 
@@ -41,7 +44,7 @@
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="assets/js/min/Sortable-min.js"></script>
 <script src="assets/js/min/ng-sortable-min.js"></script>
-<script src="assets/js/min/lineupApp-min.js"></script>
+<script src="assets/js/lineupApp.js"></script>
 
 </body>
 </html>

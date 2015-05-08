@@ -2,7 +2,82 @@
 //Setup Player list
 var theApp = angular.module('lineupApp', ['ng-sortable']);
 
-    theApp.controller('lineup', ['$scope', '$http', function($scope,$http) {
+    theApp.service('store', function () {
+      return function (name, value) {
+        try {
+          if (value) {
+            localStorage.setItem(name, JSON.stringify(value));
+          } else {
+            return JSON.parse(localStorage.getItem(name));
+          }
+        } catch (err) {}
+      };
+    });
+
+
+    theApp.factory('sortable', ['store', function (store) {
+      return function (name, idAttr, models) {
+        var i,
+            idx,
+            tmp,
+            order = store(name);
+        
+        if (order) {
+          // Restore
+          i = models.length;
+
+          while (i--) {
+            idx = order.indexOf(models[i][idAttr]);
+            
+            if (idx > -1 && idx !== i) {
+              tmp = models[i];
+              models[i] = models[idx];
+              models[idx] = tmp;
+            }
+          }
+        }
+        
+        return {
+          options: {
+            animation: 150,
+            onSort: function (evt) {
+              // Save
+              store(name, evt.models.map(function (model) {
+                return model[idAttr];
+              }));
+            }
+          },
+
+          models: models,
+        };
+      };
+    }]);
+
+
+    theApp.controller('lineup', [
+      '$scope',
+      '$http',
+      'sortable',
+      function ($scope, $http, sortableFactory) {
+        var sortable = sortableFactory("any name", "id", [
+          { id: 1, name: 'Symington, Jack', number: '17'},
+          { id: 2, name: 'Hudson-Peralta, Noah', number: '6'},
+          { id: 3, name: 'Butler, Blake',  number: '7' },
+          { id: 4, name: 'Phillips, Quartaze',  number: '24' },
+          { id: 5, name: 'Randall, Robbie',  number: '19' },
+          { id: 6, name: 'George, Nik',  number: '2' },
+          { id: 7, name: 'Flaherty, Evan',  number: '41' },
+          { id: 8, name: 'Bates, Donovan',  number: '3' },
+          { id: 9, name: 'Teschendorf, Bryce',  number: '9' },
+          { id: 10, name: 'Addleman, Jordan', number: '28' },
+          { id: 11, name: 'Szep, Wil', number: '18' }
+         ]);
+        
+        $scope.models = sortable.models;
+        $scope.sortableOptions = sortable.options;
+    }]);
+
+    theApp.controller('xlineup', ['$scope', '$http', function($scope,$http) {
         // $http.get('data/players.json')
         //     .then(function(res){
         //         $scope.player = res.data;
