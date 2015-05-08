@@ -11,12 +11,23 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/assets\/js\/lineupApp.js": {
+	"\/assets\/js\/min\/ng-sortable-min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/lineupApp.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/lineupApp-min.js",
+		"inputAbbreviatedPath": "\/assets\/js\/min\/ng-sortable-min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/min\/min\/ng-sortable-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/js\/min\/Sortable-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/min\/Sortable-min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/min\/min\/Sortable-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -39,17 +50,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/Sortable.js",
 		"outputAbbreviatedPath": "\/assets\/js\/min\/Sortable-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/Sortable.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/Sortable.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/Sortable.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
