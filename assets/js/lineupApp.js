@@ -10,16 +10,33 @@ var theApp = angular.module('lineupApp', ['ng-sortable']);
         $scope.playerConfig = {
             group: "thisLineup",
             animation: 150,
-            store: {
-                get: function (sortable) {
-                    var order = localStorage.getItem(sortable.options.group);
-                    return order ? order.split('|') : [];
-                },
-                set: function (sortable) {
-                    var order = sortable.toArray();
-                    localStorage.setItem(sortable.options.group, order.join('|'));
-                }
+            onUpdate: function (sortable) {
+                var order = angular.toJson(sortable);
+                $scope.msg = order;
+                localStorage.newOrder = order;
+                // $scope.newOrder = order;
+                // $scope.msg = $scope.newOrder;
+                // return order ? order.split('|') : [];
+
             }
+            //,            
+            // store: {
+            //     get: function (sortable) {
+            //         var order = localStorage.getItem(sortable.options.group);
+            //         $scope.newOrder = order;
+            //         $scope.msg = $scope.newOrder;
+            //         return order ? order.split('|') : [];
+            //     },
+            //     set: function (sortable) {
+            //         var order = sortable.toArray();
+            //         localStorage.setItem(sortable.options.group, order.join('|'));
+            //     }
+            // }
+        };
+
+        $scope.saveData = function () {
+            var saveOrder = $scope.newOrder;
+            $scope.msg = 'Saved: '+ JSON.stringify(saveOrder);
         };
 
         $scope.spots = 10;

@@ -19,7 +19,7 @@
 <div id="lineup" ng-app="lineupApp" ng-controller="lineup">
 
     <ul id="players" ng-sortable="playerConfig">
-        <li ng-repeat="item in player" data-number="{{item.number}}" data-id="{{item.number}} - {{item.name}} - {{item.pos}}">
+        <li ng-repeat="item in player" data-number="{{item.number}}" data-id="{{item.number}}">
         	<span>{{item.number}}</span>
         	{{item.name}}
             <div class="playerPos" data-set-pos="" data-selection=""></div>
@@ -33,6 +33,11 @@
         	{{item.pos}}
         </li>
     </ul>
+
+    <div id="data">
+        <button ng-click="saveData()">Save</button>
+        <span>{{msg}}</span>
+    </div>
 
 </div>
 

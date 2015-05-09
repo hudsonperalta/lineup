@@ -14,7 +14,8 @@ body {
   position: relative;
 }
 
-#debug { position: fixed; top: 0; display: none; }
+#debug, #data { position: fixed; top: 0; display: none; }
+#data { /*display: block;*/ }
 
 ul { list-style: none; padding: 0; }
 ul li,
