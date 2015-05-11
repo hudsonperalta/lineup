@@ -23,6 +23,7 @@ var theApp = angular.module('lineupApp', ['ng-sortable']);
         $scope.playerConfig = {
             group: "thisLineup",
             animation: 150,
+            handle: ".playerNum",
             store: {
                 /**
                  * Get the order of elements. Called once during initialization.
