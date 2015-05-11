@@ -20,7 +20,7 @@
 
     <ul id="players" ng-sortable="playerConfig">
         <li ng-repeat="item in player" data-number="{{item.number}}" data-id="{{item.number}} - {{item.name}} - {{item.pos}}">
-        	<span>{{item.number}}</span>
+        	<span class="playerNum">{{item.number}}</span>
         	{{item.name}}
             <div class="playerPos" data-set-pos="" data-selection=""></div>
         </li>

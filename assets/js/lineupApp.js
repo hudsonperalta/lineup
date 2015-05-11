@@ -10,6 +10,7 @@ var theApp = angular.module('lineupApp', ['ng-sortable']);
         $scope.playerConfig = {
             group: "thisLineup",
             animation: 150,
+            handle: ".playerNum",
             store: {
                 get: function (sortable) {
                     var order = localStorage.getItem(sortable.options.group);
