@@ -10,6 +10,7 @@ var theApp = angular.module('lineupApp', ['ng-sortable']);
         $scope.playerConfig = {
             group: "thisLineup",
             animation: 150,
+            handle: ".playerNum",
             onUpdate: function (sortable) {
                 var order = angular.toJson(sortable);
                 $scope.msg = order;
