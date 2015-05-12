@@ -64,15 +64,6 @@ ul#players,
 ul#pos,
 ul#posOptions { position: absolute; }
 
-ul li span {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 ul li:nth-child(n+11),
 ul li:nth-child(n+11) span {
 	background: rgba(255,255,255,0.3);
@@ -90,13 +81,12 @@ ul#players li { text-align: left; }
 .playerPos { border-radius: 0 4px 4px 0; border: 3px solid transparent; padding: 13px; }
 .playerPos[data-selection="focus"] { border-color: rgba(156, 193, 228, 0.5) }
 
-ul#posOptions { width: 50px; right: 15px; display: none }
-ul#posOptions li { cursor: pointer; }
+ul#posOptions { width: 50px; right: -40px; display: none }
 ul#posOptions.open { display: block }
 
 [data-selected="selected"] { color: rgba(0, 0, 0, 0.25) }
 
-body.choosePos ul#players { right: 125px; }
+
 
 /*  ORDER NUMBERS  */
 ul li span:before {
@@ -108,7 +98,7 @@ ul li span:before {
   width: 90%;
   height: 100%;
   z-index: 1;
-  opacity: 0.35;
+  opacity: 1;
   background-image: url('../img/numbers/1.svg');
   background-repeat: no-repeat;
   background-position: 50% 0;
