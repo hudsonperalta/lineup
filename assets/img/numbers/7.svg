@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="42px" height="49px" viewBox="0 0 42 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
     <title>7</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <text id="8" opacity="0.319204757" sketch:type="MSTextLayer" font-family="Knockout" font-size="72" font-weight="260" sketch:alignment="middle" fill="#D6D6D6">
-            <tspan x="4.272" y="107">8</tspan>
-        </text>
-        <text id="7" opacity="0.319204757" sketch:type="MSTextLayer" font-family="Knockout" font-size="72" font-weight="260" sketch:alignment="middle" fill="#D6D6D6">
-            <tspan x="5.82" y="49">7</tspan>
-        </text>
-        <text id="6" opacity="0.319204757" sketch:type="MSTextLayer" font-family="Knockout" font-size="72" font-weight="260" sketch:alignment="middle" fill="#D6D6D6">
-            <tspan x="4.488" y="-9">6</tspan>
-        </text>
+        <path d="M34.1534827,4.88525325 C29.828943,13.1685757 26.6770247,20.2630812 24.6976333,26.1689825 C22.718242,32.0748839 21.7070464,38.3518269 21.6640161,45 L15.306329,45 C15.4354197,39.233947 16.6671421,33.0000335 19.0015329,26.2980726 C21.3359238,19.5961117 24.310345,13.0072041 27.9248857,6.53115195 L11.4013537,6.53115195 L11.4013537,0.980277902 L34.1534827,0.980277902 L34.1534827,4.88525325 Z" id="7" fill="#D6D6D6" sketch:type="MSShapeGroup"></path>
     </g>
 </svg>
