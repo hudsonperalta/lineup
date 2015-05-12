@@ -39,6 +39,7 @@ button {
   display: inline-block;
   margin-bottom: 0;
   width: 49.5%;
+  outline:none;
 }
 
 button.right {
@@ -118,22 +119,15 @@ ul#posOptions.open { display: block }
 
 body.choosePos ul#players { right: 125px; }
 
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.lineupOptions {
-  opacity: 1;
-  display: block;
+body.nineMan button.tenMan,
+body.tenMan button.nineMan {
+  opacity: 0.35;
 }
 
 body.nineMan .lineupOptions,
 body.tenMan .lineupOptions {
   /*margin-top: -50px;*/
-  opacity: 0;
+  /*opacity: 0;*/
 }
 
 /*  ORDER NUMBERS  */
@@ -196,19 +190,4 @@ ul li:nth-child(10) span:before {
 ul li:nth-child(11) span:before,
 body.nineMan ul li:nth-child(10) span:before {
   background-image: none;
-}
-
-@keyframes fadeOutUp {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    margin-top: -50px;
-  }
-}
-
-.fadeOutUp {
-  animation-name: fadeOutUp;
 }

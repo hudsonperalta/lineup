@@ -64,15 +64,13 @@ var theApp = angular.module('lineupApp', ['ng-sortable']);
         // Watch Current Doc Change
         $scope.$watch('optSet', function() {
             if($scope.optSet === false) { $('body').attr('class',''); }
-            else {
-              ct = localStorage.lineUpCt;
-              $('body').attr('class',ct);
-            }
+            else { $('body').attr('class',localStorage.lineUpCt); }
         });
 
         $scope.setLineUpCt = function (ct) {
             $scope.optSet = true;
             localStorage.lineUpCt = ct;
+            $('body').attr('class',ct);
         };
 
     }]);
