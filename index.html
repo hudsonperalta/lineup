@@ -19,9 +19,9 @@
 <div id="lineup" ng-app="lineupApp" ng-controller="lineup">
 
     <ul id="players" ng-sortable="playerConfig">
-        <li ng-repeat="item in player" data-number="{{item.number}}" data-id="{{item.defSpot}}">
-        	<span class="playerNum">{{item.number}}</span>
-        	{{item.name}}
+         <li ng-repeat="item in player" data-number="{{item.number}}" data-id="{{item.defSpot}}">
+        	  <span class="playerNum">{{item.number}}</span>
+        	  {{item.name}}
             <div class="playerPos" data-set-pos="" data-selection=""></div>
         </li>
     </ul>
