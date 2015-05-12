@@ -12,6 +12,7 @@ body {
   background: #f4f4f4;
   font-family: 'Roboto', sans-serif;
   position: relative;
+  font-size: 16px;
 }
 
 #debug, #data { position: fixed; top: 0; display: none; }
@@ -20,7 +21,8 @@ body {
 ul { list-style: none; padding: 0; }
 ul li,
 ul li span,
-ul li div {
+ul li div,
+button {
   background: rgba(255,255,255,1);
   margin-bottom: 5px;
   padding: 16px 14px;
@@ -28,6 +30,19 @@ ul li div {
   position: relative;
   height: 53px;
   text-align: center;
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  display: inline-block;
+  margin-bottom: 0;
+  width: 49.5%;
+}
+
+button.right {
+  float: right;
 }
 
 ul li span,
@@ -74,14 +89,17 @@ ul li span {
   user-select: none;
 }
 
-ul li:nth-child(n+11),
-ul li:nth-child(n+11) span {
+body ul li:nth-child(n+11),
+body ul li:nth-child(n+11) span,
+body.nineMan ul li:nth-child(n+10),
+body.nineMan ul li:nth-child(n+10) span {
 	background: rgba(255,255,255,0.3);
 	color: #BBB;
 	text-shadow: 1px 1px 0 rgba(255,255,255,1);
 }
 
-ul li:nth-child(n+11) div {
+ul li:nth-child(n+11) div,
+body.nineMan ul li:nth-child(n+10) div {
 	display: none;
 }
 
@@ -99,6 +117,24 @@ ul#posOptions.open { display: block }
 [data-selected="selected"] { color: rgba(0, 0, 0, 0.25) }
 
 body.choosePos ul#players { right: 125px; }
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.lineupOptions {
+  opacity: 1;
+  display: block;
+}
+
+body.nineMan .lineupOptions,
+body.tenMan .lineupOptions {
+  /*margin-top: -50px;*/
+  opacity: 0;
+}
 
 /*  ORDER NUMBERS  */
 ul li span:before {
@@ -157,6 +193,22 @@ ul li:nth-child(10) span:before {
   background-image: url('../img/numbers/10.svg');
 }
 
-ul li:nth-child(11) span:before {
+ul li:nth-child(11) span:before,
+body.nineMan ul li:nth-child(10) span:before {
   background-image: none;
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+}
+
+.fadeOutUp {
+  animation-name: fadeOutUp;
 }

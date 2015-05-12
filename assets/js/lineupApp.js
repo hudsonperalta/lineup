@@ -20,7 +20,7 @@ var theApp = angular.module('lineupApp', ['ng-sortable']);
                 // return order ? order.split('|') : [];
 
             }
-            //,            
+            //,
             // store: {
             //     get: function (sortable) {
             //         var order = localStorage.getItem(sortable.options.group);
@@ -57,6 +57,23 @@ var theApp = angular.module('lineupApp', ['ng-sortable']);
             { pos: 'RF', posNum: '9' },
             { pos: 'EH', posNum: '10' }
         ];
+
+        if (!localStorage.lineUpCt) { $scope.optSet = false; }
+        else { $scope.optSet = true; }
+
+        // Watch Current Doc Change
+        $scope.$watch('optSet', function() {
+            if($scope.optSet === false) { $('body').attr('class',''); }
+            else {
+              ct = localStorage.lineUpCt;
+              $('body').attr('class',ct);
+            }
+        });
+
+        $scope.setLineUpCt = function (ct) {
+            $scope.optSet = true;
+            localStorage.lineUpCt = ct;
+        };
 
     }]);
 
@@ -112,6 +129,11 @@ function setPos(){
     setPosNum = $setPos.attr('data-set-pos');
 
     posList[thisPosNum-1]=$setPos;
+}
+
+//Set Lineup Options
+function setLineupOpt() {
+
 }
 
 //Position box clicked
