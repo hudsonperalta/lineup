@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="42px" height="50px" viewBox="0 0 42 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="45px" height="46px" viewBox="0 0 45 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
     <title>2</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <text id="3" opacity="0.319204757" sketch:type="MSTextLayer" font-family="Knockout" font-size="72" font-weight="260" sketch:alignment="middle" fill="#D6D6D6">
-            <tspan x="5.244" y="108">3</tspan>
-        </text>
-        <text id="2" opacity="0.319204757" sketch:type="MSTextLayer" font-family="Knockout" font-size="72" font-weight="260" sketch:alignment="middle" fill="#D6D6D6">
-            <tspan x="5.244" y="50">2</tspan>
-        </text>
-        <text id="1" opacity="0.319204757" sketch:type="MSTextLayer" font-family="Knockout" font-size="72" font-weight="260" sketch:alignment="middle" fill="#D6D6D6">
-            <tspan x="10.608" y="-8">1</tspan>
-        </text>
+        <path d="M33.6420278,12.1461228 C33.6420278,17.4388431 30.2426893,22.8605729 23.4439104,28.4114747 C19.3560369,32.5638935 17.3121309,36.5333742 17.3121309,40.3200359 L33.222485,40.3200359 L33.222485,46 L11.0835338,46 L11.0835338,43.6118333 C11.0835338,40.1694135 11.7020844,37.0605249 12.9392039,34.285074 C14.1763235,31.5096231 16.6451469,28.2501308 20.3457481,24.5064993 C23.1642292,21.8601392 25.159727,19.6279786 26.3323012,17.8099507 C27.5048754,15.9919228 28.0911537,14.0179398 28.0911537,11.8879426 C28.0911537,8.05825069 26.2839105,6.14343344 22.6693698,6.14343344 C19.0117988,6.14343344 17.1830408,8.12279509 17.1830408,12.0815778 L17.1830408,16.1156432 L11.8903469,16.1156432 L11.8903469,12.0170327 C11.8903469,8.89733985 12.8154834,6.27791288 14.665784,4.15867324 C16.5160846,2.0394336 19.162405,0.979829673 22.6048247,0.979829673 C26.3484562,0.979829673 29.1238655,2.0232975 30.9311358,4.11026446 C32.7384062,6.19723141 33.6420278,8.87582408 33.6420278,12.1461228 L33.6420278,12.1461228 Z" id="2" fill="#D6D6D6" sketch:type="MSShapeGroup"></path>
     </g>
 </svg>

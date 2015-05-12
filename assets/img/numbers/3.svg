@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="42px" height="52px" viewBox="0 0 42 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="45px" height="47px" viewBox="0 0 45 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
     <title>3</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <text id="4" opacity="0.319204757" sketch:type="MSTextLayer" font-family="Knockout" font-size="72" font-weight="260" sketch:alignment="middle" fill="#D6D6D6">
-            <tspan x="5.316" y="108">4</tspan>
-        </text>
-        <text id="3" opacity="0.319204757" sketch:type="MSTextLayer" font-family="Knockout" font-size="72" font-weight="260" sketch:alignment="middle" fill="#D6D6D6">
-            <tspan x="5.244" y="50">3</tspan>
-        </text>
-        <text id="2" opacity="0.319204757" sketch:type="MSTextLayer" font-family="Knockout" font-size="72" font-weight="260" sketch:alignment="middle" fill="#D6D6D6">
-            <tspan x="5.244" y="-8">2</tspan>
-        </text>
+        <path d="M33.3838476,36.4150605 C33.3838476,39.642329 32.4103029,42.2133477 30.4631842,44.1281936 C28.5160656,46.0430396 25.8052007,47.0004482 22.3305083,47.0004482 C18.8558159,47.0004482 16.2041167,46.0161461 14.3753312,44.0475123 C12.5465458,42.0788785 11.6321667,39.577783 11.6321667,36.5441506 L11.6321667,32.5746302 L16.9248606,32.5746302 L16.9248606,35.8341551 C16.9248606,39.835968 18.6783168,41.8368445 22.1852819,41.8368445 C25.8428529,41.8368445 27.6716109,39.943542 27.6716109,36.1568803 L27.6716109,29.9928283 C27.6716109,27.3034379 26.0902731,25.9587629 22.92755,25.9587629 L19.47439,25.9587629 L19.47439,21.2147019 L22.92755,21.2147019 C26.0902731,21.2147019 27.6716109,19.8700269 27.6716109,17.1806365 L27.6716109,11.8879426 C27.6716109,8.05825069 25.8428529,6.14343344 22.1852819,6.14343344 C18.6568017,6.14343344 16.9033455,8.14430989 16.9248606,12.1461228 L16.9248606,15.4056477 L11.6321667,15.4056477 L11.6321667,11.4361273 C11.6321667,8.40249492 12.5465458,5.90139935 14.3753312,3.93276558 C16.2041167,1.9641318 18.8558159,0.979829673 22.3305083,0.979829673 C25.8052007,0.979829673 28.5160656,1.9372383 30.4631842,3.85208427 C32.4103029,5.76693024 33.3838476,8.3379489 33.3838476,11.5652174 L33.3838476,16.0510982 C33.3838476,17.944429 32.9212794,19.5526603 31.9961291,20.8758404 C31.0709788,22.1990205 29.7908482,23.0219616 28.1556988,23.3446885 C31.6411488,24.2698388 33.3838476,26.6041946 33.3838476,30.3478261 L33.3838476,36.4150605 Z" id="3" fill="#D6D6D6" sketch:type="MSShapeGroup"></path>
     </g>
 </svg>
