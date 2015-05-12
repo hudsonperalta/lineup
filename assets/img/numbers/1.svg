@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="42px" height="49px" viewBox="0 0 42 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
     <title>1</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <text id="2" opacity="0.319204757" sketch:type="MSTextLayer" font-family="Knockout" font-size="72" font-weight="260" sketch:alignment="middle" fill="#D6D6D6">
-            <tspan x="5.244" y="107">2</tspan>
-        </text>
-        <text id="1" opacity="0.319204757" sketch:type="MSTextLayer" font-family="Knockout" font-size="72" font-weight="260" sketch:alignment="middle" fill="#D6D6D6">
-            <tspan x="10.608" y="49">1</tspan>
-        </text>
+        <path d="M25.0642976,45 L19.0938808,45 L19.0938808,3.82025997 C20.9872116,3.82025997 21.9338628,2.87360875 21.9338628,0.980277902 L25.0642976,0.980277902 L25.0642976,45 Z" id="1" fill="#D6D6D6" sketch:type="MSShapeGroup"></path>
     </g>
 </svg>
