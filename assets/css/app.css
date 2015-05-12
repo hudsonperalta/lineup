@@ -14,7 +14,7 @@ body {
   position: relative;
 }
 
-#debug { position: fixed; top: 0 }
+#debug { position: fixed; top: 0; display: none; }
 
 ul { list-style: none; padding: 0; }
 ul li,
@@ -22,7 +22,7 @@ ul li span,
 ul li div {
   background: rgba(255,255,255,1);
   margin-bottom: 5px;
-  padding: 16px;
+  padding: 16px 14px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   position: relative;
   height: 53px;
@@ -85,6 +85,7 @@ ul li:nth-child(n+11) div {
 }
 
 ul#players { left: 70px; right: 70px; }
+
 ul#players li { text-align: left; }
 
 .playerPos { border-radius: 0 4px 4px 0; border: 3px solid transparent; padding: 13px; }

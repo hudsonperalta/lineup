@@ -7,12 +7,26 @@ var theApp = angular.module('lineupApp', ['ng-sortable']);
             .then(function(res){
                 $scope.player = res.data;
             });
-        $scope.playerConfig = { animation: 150 };
+        $scope.playerConfig = {
+            group: "thisLineup",
+            animation: 150,
+            handle: ".playerNum",
+            store: {
+                get: function (sortable) {
+                    var order = localStorage.getItem(sortable.options.group);
+                    return order ? order.split('|') : [];
+                },
+                set: function (sortable) {
+                    var order = sortable.toArray();
+                    localStorage.setItem(sortable.options.group, order.join('|'));
+                }
+            }
+        };
 
         $scope.spots = 10;
         $scope.getSpots = function (num) {
             return new Array(num);
-        }
+        };
 
         $scope.positions = [
             { pos: 'P', posNum: '1' },
@@ -27,7 +41,8 @@ var theApp = angular.module('lineupApp', ['ng-sortable']);
             { pos: 'EH', posNum: '10' }
         ];
 
-    }])
+    }]);
+
 
 //-- jQuery --
 //Variables
@@ -43,12 +58,12 @@ var thisPosNum;
 
 //Add position into the box
 function drawPos(){
-    $('#sel').text(posSelected)
+    $('#sel').text(posSelected);
 }
 
 //Open Position List
 function openPos() {
-    if(posOpen == 0) {
+    if(posOpen === 0) {
         posOpen = 1;
         $('#posOptions').addClass('open');
         $('body').addClass('choosePos');
@@ -94,8 +109,9 @@ $(document).on('click', '.playerPos', function() {
     setPosNum = $setPos.attr('data-set-pos');
 
     //Open position list
-    if(posOpen != 1)
+    if(posOpen !== 1){
         openPos();
+    }
 
     //Clear any existing value
      if(setPosNum>0){
@@ -112,9 +128,9 @@ $(document).on('click', '#posOptions li', function() {
     thisPosNum = $pos.attr('data-pos-number');
 
     //Check if position is already in use
-    if($pos.attr('data-selected') != 'selected'){
+    if($pos.attr('data-selected') !== 'selected'){
         //Not used, check if selection already has postion
-        if(setPosNum == '') {
+        if(setPosNum === '') {
             //No postion, fill
             setPos();
         }else{
