@@ -1,12 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700,900);
 
+html {
+  height: 100%;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
 body {
+  height: 100%;
   width: 100%;
-  max-width: 640px;
+  /*max-width: 640px;*/
   margin: 0 auto;
   padding: 16px;
   background: #f4f4f4;
@@ -104,7 +109,7 @@ body.nineMan ul li:nth-child(n+10) div {
 	display: none;
 }
 
-ul#players { left: 70px; right: 70px; }
+ul#players { left: 70px; right: 70px; margin-top: 0; }
 
 ul#players li { text-align: left; }
 
@@ -124,10 +129,14 @@ body.tenMan button.nineMan {
   opacity: 0.35;
 }
 
-body.nineMan .lineupOptions,
-body.tenMan .lineupOptions {
-  /*margin-top: -50px;*/
-  /*opacity: 0;*/
+.lineupOptions {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.lineupOptions button {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 /*  ORDER NUMBERS  */

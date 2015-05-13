@@ -9,45 +9,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 	<link href="assets/css/app.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/layout.css" rel="stylesheet" type="text/css"/>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 </head>
-<body>
+<body ng-app="lineupApp" ng-controller="lineup">
 
-<div id="debug">
-    Selected: <span id="sel"></span>
-</div>
+<section class="hbox stretch">
+    <aside class="bg-dark aside-sm" id="nav">
+        <section class="vbox">
+            <header class="dker nav-bar">
+                Logo
+            </header>
+            <section class="w-f">
+              <div ng-include src="'options.html'" ></div>
+            </section>
 
-<div id="lineup" ng-app="lineupApp" ng-controller="lineup">
-
-    <div class="lineupOptions">
-			<button name="nineMan" class="nineMan" ng-click="setLineUpCt('nineMan')">9</button>
-			<button class="right tenMan" name="tenMan" ng-click="setLineUpCt('tenMan')">10</button>
-		</div>
-
-		<ul id="players" ng-sortable="playerConfig">
-        <li ng-repeat="item in player" data-number="{{item.number}}" data-id="{{item.number}}">
-        	<span class="playerNum">{{item.number}}</span>
-        	{{item.name}}
-            <div class="playerPos" data-set-pos="" data-selection=""></div>
-        </li>
-    </ul>
-
-    <ul id="posOptions">
-        <li ng-repeat="item in positions"
-            data-pos="{{item.pos}}" data-pos-number="{{item.posNum}}"
-            data-selected="">
-        	{{item.pos}}
-        </li>
-    </ul>
-
-    <div id="data">
-        <button ng-click="saveData()">Save</button>
-        <span>{{msg}}</span>
-    </div>
-
-</div>
+            <footer class="footer bg-gradient hidden-xs">
+                footer
+            </footer>
+        </section>
+    </aside>
+    <section id="content">
+        <section class="vbox">
+            <header class="header bg-light bg-gradient b-b">
+                <p>Today's Lineup</p>
+            </header>
+            <section class="scrollable wrapper">
+                <div ng-include src="'lineup.html'" ></div>
+            </section>
+        </section>
+    </section>
+</section>
 
 
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="assets/js/min/Sortable-min.js"></script>
 <script src="assets/js/min/ng-sortable-min.js"></script>
@@ -55,3 +50,4 @@
 
 </body>
 </html>
+

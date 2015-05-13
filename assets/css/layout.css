@@ -1,0 +1,92 @@
+body {
+  max-width: 100%;
+  padding: 0;
+}
+
+.hbox {
+    display: block;
+}
+
+.bg-dark {
+    background-color: #4c5566;
+    color: #c4c9d3;
+}
+
+.scrollable {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.header, .footer {
+    min-height: 50px;
+    padding: 0 15px;
+}
+
+.header > p, .footer > p {
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.nav-bar {
+    position: relative;
+}
+
+.dker {
+    background-color: #3d4452;
+}
+
+@media (min-width: 768px) {
+    .hbox {
+        display: table;
+        table-layout: fixed;
+        border-spacing: 0;
+        width: 100%;
+    }
+
+    .hbox.stretch {
+        height: 100%;
+    }
+
+    .hbox > aside, .hbox > section {
+        display: table-cell;
+        vertical-align: top;
+        height: 100%;
+        padding: 0;
+        float: none;
+        position: relative;
+    }
+
+    .vbox {
+        display: table;
+        border-spacing: 0;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    .vbox > header ~ section {
+        top: 50px;
+    }
+
+    .vbox > section, .vbox > footer {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .vbox > footer {
+        top: auto;
+        z-index: 1000;
+    }
+
+    .vbox > section.w-f {
+        bottom: 50px;
+    }
+
+
+
+    .aside-sm {
+        width: 150px;
+    }
+}
