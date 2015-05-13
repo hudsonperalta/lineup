@@ -23,7 +23,7 @@ body {
 #debug, #data { position: fixed; top: 0; display: none; }
 #data { /*display: block;*/ }
 
-ul { list-style: none; padding: 0; }
+ul { list-style: none; padding: 0; margin-top: 0; }
 ul li,
 ul li span,
 ul li div,
@@ -109,7 +109,7 @@ body.nineMan ul li:nth-child(n+10) div {
 	display: none;
 }
 
-ul#players { left: 70px; right: 70px; margin-top: 0; }
+ul#players { left: 70px; right: 70px; }
 
 ul#players li { text-align: left; }
 
