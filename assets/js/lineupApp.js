@@ -129,11 +129,6 @@ function setPos(){
     posList[thisPosNum-1]=$setPos;
 }
 
-//Set Lineup Options
-function setLineupOpt() {
-
-}
-
 //Position box clicked
 $(document).on('click', '.playerPos', function() {
     //Set Focus to position box
