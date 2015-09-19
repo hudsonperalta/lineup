@@ -18,6 +18,8 @@ body {
 #debug, #data { position: fixed; top: 0; display: none; }
 #data { /*display: block;*/ }
 
+.hide { display: none; }
+
 ul { list-style: none; padding: 0; }
 ul li,
 ul li span,

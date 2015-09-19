@@ -18,17 +18,17 @@
 
 <div id="lineup" ng-app="lineupApp" ng-controller="lineup">
 
-    <div class="lineupOptions">
-			<button name="nineMan" class="nineMan" ng-click="setLineUpCt('nineMan')">9</button>
-			<button class="right tenMan" name="tenMan" ng-click="setLineUpCt('tenMan')">10</button>
-		</div>
+    <div class="lineupOptions hide">
+		<button name="nineMan" class="nineMan" ng-click="setLineUpCt('nineMan')">9</button>
+		<button class="right tenMan" name="tenMan" ng-click="setLineUpCt('tenMan')">10</button>
+	</div>
 
-		<ul id="players" ng-sortable="playerConfig">
-        <li ng-repeat="item in player" data-number="{{item.number}}" data-id="{{item.number}}">
-        	<span class="playerNum">{{item.number}}</span>
-        	{{item.name}}
-            <div class="playerPos" data-set-pos="" data-selection=""></div>
-        </li>
+	<ul id="players" ng-sortable="playerConfig">
+    <li ng-repeat="item in player" data-number="{{item.number}}" data-id="{{item.number}}">
+    	<span class="playerNum">{{item.number}}</span>
+    	{{item.name}}
+        <div class="playerPos" data-set-pos="" data-selection=""></div>
+    </li>
     </ul>
 
     <ul id="posOptions">

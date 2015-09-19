@@ -40,7 +40,7 @@ var theApp = angular.module('lineupApp', ['ng-sortable']);
             $scope.msg = 'Saved: '+ JSON.stringify(saveOrder);
         };
 
-        $scope.spots = 10;
+        $scope.spots = 12;
         $scope.getSpots = function (num) {
             return new Array(num);
         };
