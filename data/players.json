@@ -8,8 +8,8 @@
     "number": "6"
   },
   { 
-    "name": "Butler, Blake", 
-    "number": "7" 
+    "name": "Haudek, Andrew", 
+    "number": "1" 
   },
   { 
     "name": "Randall, Robbie", 
@@ -20,23 +20,31 @@
     "number": "22" 
   },
   { 
-    "name": "George, Nik", 
-    "number": "2" 
+    "name": "Stanley, Noah",
+    "number": "9" 
   },
   { 
     "name": "Flaherty, Evan", 
     "number": "41" 
   },
   { 
-    "name": "Bates, Donovan", 
-    "number": "3" 
+    "name": "Hudson-Peralta, Julian", 
+    "number": "27" 
   },
   { 
-    "name": "Addleman, Jordan",
-    "number": "28" 
+    "name": "Earle, Ian",
+    "number": "9" 
   },
   { 
-    "name": "Addleman, Zach",
+    "name": "Hollers, Zack",
     "number": "11"
+  },
+  { 
+    "name": "Durka, Seth",
+    "number": "3"
+  },
+  { 
+    "name": "Montrose, Jacob", 
+    "number": "25" 
   }
 ]
